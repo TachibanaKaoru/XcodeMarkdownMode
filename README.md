@@ -7,7 +7,8 @@ Simple script to change markdown file in Xcode.
 ## Installation
 - place these scripts anywhere in your mac.
 - open Xcode and open **Edit Behaviors...** menu.
-- press **+** button and add script.
+- press **+** button and add new behavior.
+- check **Run** in the Right pane, and select script.
 
 ## Usage
 
