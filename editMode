@@ -1,0 +1,24 @@
+#!/usr/bin/swift
+
+import Foundation
+
+let env = ProcessInfo.processInfo.environment
+let manager = FileManager.default
+
+if let pathValue = env["XcodeProjectPath"] as? String{
+
+  var fileURL = URL(fileURLWithPath: pathValue)
+  fileURL.appendPathComponent(".xcodesamplecode.plist")
+
+  try! manager.removeItem(at: fileURL)
+
+}
+if let pathValue = env["XcodeWorkspacePath"] as? String{
+
+  var fileURL = URL(fileURLWithPath: pathValue)
+  fileURL.appendPathComponent(".xcodesamplecode.plist")
+
+  try! manager.removeItem(at: fileURL)
+
+}
+

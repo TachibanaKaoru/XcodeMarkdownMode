@@ -1,0 +1,32 @@
+#!/usr/bin/swift
+
+import Foundation
+
+let env = ProcessInfo.processInfo.environment
+let manager = FileManager.default
+
+let fileNakami = """
+<?xml version="1.0" encoding=\"UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<array/>
+</plist>
+"""
+
+if let pathValue = env["XcodeProjectPath"] as? String{
+
+  var fileURL = URL(fileURLWithPath: pathValue)
+  fileURL.appendPathComponent(".xcodesamplecode.plist")
+
+  try! fileNakami.write(to: fileURL, atomically: true, encoding: String.Encoding.utf8)
+
+}
+if let pathValue = env["XcodeWorkspacePath"] as? String{
+
+  var fileURL = URL(fileURLWithPath: pathValue)
+  fileURL.appendPathComponent(".xcodesamplecode.plist")
+
+  try! fileNakami.write(to: fileURL, atomically: true, encoding: String.Encoding.utf8)
+
+}
+
