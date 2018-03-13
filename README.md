@@ -1,6 +1,10 @@
 # XcodeMarkdownMode
 Simple script to change markdown file in Xcode.
 
+<img src="https://github.com/TachibanaKaoru/XcodeMarkdownMode/blob/master/images/editmode.png" width=320>
+<img src="https://github.com/TachibanaKaoru/XcodeMarkdownMode/blob/master/images/previewmode.png" width=320>
+
+
 ## Requirements
 * Xcode 9.2~
 
